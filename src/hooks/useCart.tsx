@@ -62,7 +62,7 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
       }
 
       setCart(newCart);
-      localStorage.setItem("@@RocketShoes:cart", JSON.stringify(newCart));
+      localStorage.setItem("@RocketShoes:cart", JSON.stringify(newCart));
     } catch {
       toast.error("Erro na adição do produto");
     }
@@ -77,7 +77,7 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
       if (productIndex >= 0) {
         newCart.splice(productIndex, 1);
         setCart(newCart);
-        localStorage.setItem("@@RocketShoes:cart", JSON.stringify(newCart));
+        localStorage.setItem("@RocketShoes:cart", JSON.stringify(newCart));
       } else {
         throw Error();
       }
@@ -113,7 +113,7 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
       if (productExists) {
         productExists.amount = amount;
         setCart(newCart);
-        localStorage.setItem("@@RocketShoes:cart", JSON.stringify(newCart));
+        localStorage.setItem("@RocketShoes:cart", JSON.stringify(newCart));
       } else {
         throw Error();
       }

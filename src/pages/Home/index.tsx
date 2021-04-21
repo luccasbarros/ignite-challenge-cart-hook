@@ -63,7 +63,7 @@ const Home = (): JSX.Element => {
 
         {products.map((product) => {
           return (
-            <li>
+            <li key={product.id}>
               <img
                 src={product.image}
                 alt={product.title}
